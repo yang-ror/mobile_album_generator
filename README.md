@@ -18,4 +18,4 @@ And do as it says:
 
 On your mobile devices:
 
-<img src="https://github.com/yang-ror/mobile_album_generator/blob/main/Screen%20shots/IMG_0943.PNG?raw=true" alt="Screen shot" style="width: 100px" />
+<img src="https://github.com/yang-ror/mobile_album_generator/blob/main/Screen%20shots/IMG_0943.PNG?raw=true" alt="Screen shot" width="300" />
