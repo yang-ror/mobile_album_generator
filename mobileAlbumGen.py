@@ -2,13 +2,12 @@
 #  mobileAlbumgen.py
 #  project: mobile_album_generator
 #  author: Zifan Yang
-#  date created: 2021-01-24
+#  date created: 2020-07-09
 #  last modified: 2021-01-24
 # =============================================================================
 
-
 import os
-
+import socket
 
 # generate a html page for each sub-directory with picture in the directory.
 # html files are stored in ./html/
@@ -33,7 +32,7 @@ def generate_html():
             file.write('<title>'+ title +'</title>')
             file.write('<meta name="viewport" content="width=device-width, initial-scale=1.0" charset=utf-8>\n')
             file.write("</head>\n")
-            file.write("<body style>\n")
+            file.write("<body>\n")
 
             for image in os.listdir(directory):
                 if not image.startswith('.'):
@@ -58,7 +57,7 @@ def generate_index(htmlFiles):
     file.write('<title>' + albumTitle + '</title>')
     file.write('<meta name="viewport" content="width=device-width, initial-scale=1.0" charset=utf-8>\n')
     file.write("</head>\n")
-    file.write("<body style>\n")
+    file.write("<body>\n")
     
     for htmlFilename in htmlFiles:
         line = '<a href="' + htmlFilename + '">' + htmlFilename[7:-5] +'</a>\n'
@@ -88,9 +87,14 @@ def generate_index(htmlFiles):
 # this script does not need to be run again if there's no change in the directory.
 if __name__ == "__main__":
     generate_index(generate_html())
-    print('****************************************************************************************************************************************')
-    print('*                                                                                                                                      *')
-    print("*       Succeed! Now run 'python3 -m http.server' to host in LAN then open the browser on your phone and visit: you-local-ip:8000      *")
-    print('*                                                                                                                                      *')
-    print('****************************************************************************************************************************************')
+    ipAddr = socket.gethostbyname(socket.gethostname())
+    
+    print('*********************************************************************************')
+    print('*                                                                               *')
+    print("*     Succeed! Open the browser on your phone and visit:", ipAddr, ":8000    *")
+    print('*                                                                               *')
+    print('*********************************************************************************')
+
+    #change to 'python -m http.server' on Windows
+    os.system('python3 -m http.server')
 
