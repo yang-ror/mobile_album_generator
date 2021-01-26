@@ -19,3 +19,11 @@ And do as it says:
 On your mobile devices:
 
 <img src="https://github.com/yang-ror/mobile_album_generator/blob/main/Screen%20shots/IMG_0943.PNG?raw=true" alt="Screen shot" width="300" />
+
+
+# Mobile Album Generator(php version)
+If you have an apache server setup already, this php version(mobileAlbumGen.php) is more convenience for you.
+
+ - Put mobileAlbumGen.php into your apache server directory(/var/www/html or any sub-directories)
+ - Rename it to 'index.php' (optional)
+ - Upload all the folders containes pictures in the same directory.
