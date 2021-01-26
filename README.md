@@ -12,7 +12,7 @@ Run it (this script does not need to be run again if there's no change in the di
 
 <img src="https://github.com/yang-ror/mobile_album_generator/blob/main/Screen%20shots/Screen%20Shot%202021-01-25%20at%2012.08.28%20AM.png" alt="Screen shot" style="width: 100%" />
 
-And do as it says:
+This command will run at the end of this script (On Windows, change the command to 'python -m http.server'):
 
 <img src="https://github.com/yang-ror/mobile_album_generator/blob/main/Screen%20shots/Screen%20Shot%202021-01-25%20at%2012.08.49%20AM.png" alt="Screen shot" style="width: 100%" />
 
