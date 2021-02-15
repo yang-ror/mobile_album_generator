@@ -8,7 +8,7 @@ That is where this script should be started in:
 
 <img src="https://github.com/yang-ror/mobile_album_generator/blob/main/Screen%20shots/Screen%20Shot%202021-01-25%20at%2012.07.02%20AM.png" alt="Screen shot" style="width: 100%" />
 
-Run it (this script does not need to be run again if there's no change in the directory):
+Run it:
 
 <img src="https://github.com/yang-ror/mobile_album_generator/blob/main/Screen%20shots/Screen%20Shot%202021-01-25%20at%2012.08.28%20AM.png" alt="Screen shot" style="width: 100%" />
 
@@ -31,4 +31,4 @@ If you have an apache server setup already, this php version(mobileAlbumGen.php)
  - Put mobileAlbumGen.php into your apache server directory(/var/www/html or any sub-directories)
  - Rename it to 'index.php' (optional)
  - Upload all the folders containes pictures in the same directory.
- - Lastly, visit this php page on your apache host with a GET value: [?display=home].
+ - Lastly, visit this php page on your apache host.

@@ -3,7 +3,11 @@
  project: mobile_album_generator
  author: Zifan Yang
  date created: 2021-01-25
- last modified: 2021-01-25
+ last modified: 2021-02-14
+ change log:
+    2021-02-14
+        1. no longer need to set the get variable to display the home menu
+        2. fix index number not incrementing
 ============================================================================= -->
 
 <!doctype html>
@@ -18,7 +22,7 @@
         <?php
             //scan current directory for any picture folder and display a link to them
             $display = $_GET["display"];
-            if($display == 'home'){
+            if(!isset($display)){
                 $dir = './';
                 $i = 1;
                 foreach (scandir($dir) as $item) {
@@ -28,6 +32,7 @@
 					echo "<label>$i. </label>";
                     echo "<a href='index.php?display=$item'>$item</a>";
                     echo "<br>";
+                    $i++;
 				}
             }
             //reads the name of a sub-directory then display all the pictures in it.
