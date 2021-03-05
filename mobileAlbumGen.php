@@ -3,11 +3,13 @@
  project: mobile_album_generator
  author: Zifan Yang
  date created: 2021-01-25
- last modified: 2021-02-14
+ last modified: 2021-03-04
  change log:
     2021-02-14
         1. no longer need to set the get variable to display the home menu
         2. fix index number not incrementing
+    2021-03-04
+        1. optimized for desktop view
 ============================================================================= -->
 
 <!doctype html>
@@ -17,6 +19,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Mobile Album</title>
+        <style>
+            html{
+                width: 100%;
+            }
+
+            body{
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 800px;
+            }
+        </style>
     </head>
     <body>
         <?php
@@ -43,7 +56,7 @@
                     if (is_dir("./$item")) continue;
 
                     echo '<img src="' . $dir . $item . '" width="100%" border="0" style="display:block;">';
-                    echo "<br>";
+                    // echo "<br>";
 				}
             }
         ?>
