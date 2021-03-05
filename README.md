@@ -29,6 +29,6 @@ On your mobile devices:
 If you have an apache server setup already, this php version(mobileAlbumGen.php) is more convenience for you.
 
  - Put mobileAlbumGen.php into your apache server directory(/var/www/html or any sub-directories)
- - Rename it to 'index.php' (optional)
+ - Rename it to 'index.php'
  - Upload all the folders containes pictures in the same directory.
  - Lastly, visit this php page on your apache host.
