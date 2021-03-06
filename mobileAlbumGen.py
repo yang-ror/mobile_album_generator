@@ -3,7 +3,10 @@
 #  project: mobile_album_generator
 #  author: Zifan Yang
 #  date created: 2020-07-09
-#  last modified: 2021-01-24
+#  last modified: 2021-03-05
+#  changelog:
+#       2021-03-05:
+#       1. optimized for desktop view
 # =============================================================================
 
 import os
@@ -31,6 +34,17 @@ def generate_html():
             file.write('<head>\n')
             file.write('<title>'+ title +'</title>')
             file.write('<meta name="viewport" content="width=device-width, initial-scale=1.0" charset=utf-8>\n')
+            file.write('<style>')
+            file.write('html{')
+            file.write('    width: 100%;')
+            file.write('}')
+
+            file.write('body{')
+            file.write('    margin-left: auto;')
+            file.write('    margin-right: auto;')
+            file.write('    max-width: 800px;')
+            file.write('}')
+            file.write('</style>')
             file.write("</head>\n")
             file.write("<body>\n")
 
@@ -56,6 +70,17 @@ def generate_index(htmlFiles):
     file.write('<head>\n')
     file.write('<title>' + albumTitle + '</title>')
     file.write('<meta name="viewport" content="width=device-width, initial-scale=1.0" charset=utf-8>\n')
+    file.write('<style>')
+    file.write('html{')
+    file.write('    width: 100%;')
+    file.write('}')
+
+    file.write('body{')
+    file.write('    margin-left: auto;')
+    file.write('    margin-right: auto;')
+    file.write('    max-width: 800px;')
+    file.write('}')
+    file.write('</style>')
     file.write("</head>\n")
     file.write("<body>\n")
     
